@@ -1,0 +1,162 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 20, 2016, 3:46:08 PM
+    Author     : Sothie
+*/
+
+html, body {
+    height: 100%;
+    background-color: #cccccc;
+    font-size: 20px;
+}
+
+.saborder{
+    border: 1px solid #ff1a1a;
+    border-radius: 1px;
+    padding-top: 30px;
+    margin-top: 0;
+    margin-bottom: 0;      
+    border-top: none;
+    border-bottom: none;
+}
+
+.sa_container{
+    height: 100%;
+    background-color: #fff
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu > li > a:hover, 
+.dropdown-menu >    li > a:focus, 
+.dropdown-submenu:hover > a{
+    background-color: #ff6666;
+}
+
+.a{
+    font-size: 15px;
+}
+
+/**Bootstrap Carousel FADE**/
+.carousel img {width:100%}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    z-index: 10;
+    padding-top: 0;
+    padding-bottom: 0px;
+    color: #fff;
+    text-align: left;
+    padding-left: 2%;
+}
+.carousel-caption h3 {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    letter-spacing: -1px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 6px !important;
+    text-align: left;
+    text-shadow: 2px 1px 2px rgba(0,0,0,0.9);
+}
+.carousel-caption p {
+    margin-top: 0;
+    font-size: 14px;
+    text-align: left;
+}
+.carousel-control { width: /*15%*/ 8% }
+.carousel-indicators { bottom: 2px }
+.carousel-indicators .active { background: #FDF7DE }
+
+/**arrows**/
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+}
+
+/* Active slides are visible on transition end */
+.carousel.fading .carousel-inner > .active,
+/* Next slide is visible during transition */
+.carousel.fading .carousel-inner > .next.left {
+    opacity: 1;
+}
+.carousel.fading .carousel-inner > .next,
+.carousel.fading .carousel-inner > .active.left {
+    opacity: 0;
+}
+
+.carousel-indicators li{
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #ff3333;
+}
+
+.carousel-indicators .active{
+    background-color: #ff3333;
+    height: 20px;
+    width: 20px;    
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:200px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 170px;
+  clear:both;
+  padding-top:20px;
+  background-color: #1B1B1B;
+  width: 100%;  
+} 
+/*.footer {
+    position: relative;
+    margin-top: 150px;  negative value of footer height 
+    height: auto;
+    clear:both;
+    padding-top:20px;
+    background-color: #1B1B1B;
+    width: 100%;
+} */
+
+.img_border{
+    border: 1px solid #ff1a1a;
+    border-radius: 1px;
+    margin-top: 0;
+    margin-bottom: 0;      
+}
+
+blockquote{
+    border-left: 5px solid #ff9999;
+}

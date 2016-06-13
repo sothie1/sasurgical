@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="SASurgical">
+    <head>
+        <title>SA-Surgical</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <base href="/sa_surgical/"/>
+
+        <link href="resources/css/bootstrap.css" rel="stylesheet"/>
+        <link href="resources/css/bootstrap-theme.css" rel="stylesheet"/>        
+        <link href="resources/css/font-awesome.css" rel="stylesheet"/>      
+        <link href="resources/css/sasurgical_theme.css" rel="stylesheet"/>
+        <link href="resources/css/bootstrap.vertical-tabs.css" rel="stylesheet"/>
+
+        <script src="resources/js/dependencies/jquery-2.2.3.js"></script>                
+        <script src="resources/js/dependencies/tether.min.js"></script>                
+        <script src="resources/js/dependencies/angular.js"></script>      
+        <script src="resources/js/dependencies/angular-mocks.js"></script>              
+        <script src="resources/js/dependencies/angular-animate.min.js"></script>
+        <script src="resources/js/dependencies/angular-touch.js"></script>
+        <script src="resources/js/dependencies/angular-route.min.js"></script>
+        <script src="resources/js/dependencies/angular-sanitize.min.js"></script>
+        <script src="resources/js/dependencies/bootstrap.min.js"></script>
+        <script src="resources/js/dependencies/ui-bootstrap-tpls-1.3.3.js"></script>
+
+        <!--Importing the controller scripts-->
+        <script src="resources/js/app.js"></script>  
+        <script src="resources/js/services.js"></script>
+        <script src="resources/js/routes.js"></script>
+        <script src="resources/js/main_controller.js"></script>
+        <script src="resources/js/home_page.js"></script>      
+        <script src="resources/js/category_browse.js"></script>
+
+    </head>
+    <body ng-controller="MainController as mainCtrl">
+
+        <div class="container saborder sa_container" style="overflow-x: scroll;">            
+            <a ng-href="/sa_surgical" style=""><img src="resources/img/slider/site/logo.png" style="max-height: 20%; max-width: 20%"></a>  
+            <div id = "wrap">
+                <nav class="navbar navbar-static-top navbar-default" style="margin-top: 30px" >
+                    <div class="container-fluid">
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/sa_surgical">Home</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="browse/surgical">Surgical Instruments</a></li>
+                                        <li><a href="browse/dental">Dental Instruments</a></li>
+                                        <li><a href="browse/veterinary">Veterinary Instruments</a></li>
+                                        <li><a href="browse/manicure">Manicure / Pedicure</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Request a quote</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Company Profile</a></li>
+                                        <li><a href="#">About Super Asia Group</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Contact Us</a></li>                            
+                            </ul>
+                            <form class="navbar-form navbar-right" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+                <div class="container-fluid" ng-view></div> 
+            </div>
+
+            <!--This is the footer #1B1B1B-->
+            <footer class="footer">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <center>
+                            <img src="resources/img/newlogo2.png" style="margin-bottom: 8px">
+                            <p style="font-size: 15px; color:#8c8c8c">A leading Manufacturer of Surgical and Orthopaedic Instruments, Portable Autoclaves, and Operating Table Accessories.
+                                by Super Aisa Group</p>
+                        </center>
+                    </div>
+                    <div class="col-lg-3">
+                        <center>
+                            <p style="font-size: 20px; color:#e6e6e6">Also find us on:</p>      
+                            <i class="fa fa-facebook-square fa-2x" style="color: #3b5998" aria-hidden="true"></i>
+                            <i class="fa fa-linkedin-square fa-2x" style="color: #007bb5" aria-hidden="true"></i>
+                            <i class="fa fa-twitter-square fa-2x" style="color: #55acee" aria-hidden="true"></i>
+                        </center>
+                    </div>
+                    <div class="col-lg-3">
+                        <p style="font-size: 20px; color:#e6e6e6">Contact Info:</p>      
+                        <p style="font-size: 15px; color:#e6e6e6">Email: info@sa-surgical.com</p>
+                        <p style="font-size: 15px; color:#e6e6e6">Phone: (443) 819-0577</p>    
+                        <p style="font-size: 15px; color:#e6e6e6">Location: E Lombard Street, Suite 840 Baltimore, Maryland 21202</p>                        
+                    </div>
+                    <div class="col-lg-3">
+                        <p style="font-size: 20px; color:#e6e6e6">Direction (map goes here soon):</p>                              
+                    </div>                    
+                </div>
+            </footer>
+        </div>       
+    </body>
+</html>

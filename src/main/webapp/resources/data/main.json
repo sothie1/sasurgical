@@ -1,0 +1,28 @@
+{
+    "carousel": [
+        {
+            "source" : "/sa_surgical/resources/img/slider/bbq_1.jpg",
+            "title" : "BBQ_1",
+            "caption" : "OOOH YEAH",
+            "active" : 1
+        },
+        {
+            "source" : "/sa_surgical/resources/img/slider/bbq_2.jpg",
+            "title" : "BBQ_2",
+            "caption" : "MMMMMMM",
+            "active" : 0
+        },
+        {
+            "source" : "/sa_surgical/resources/img/slider/bbq_3.jpg",
+            "title" : "BBQ_3",
+            "caption" : "OHOHOHOHOH",
+            "active" : 0
+        },
+        {
+            "source" : "/sa_surgical/resources/img/slider/bbq_4.jpg",
+            "title" : "BBQ_4",
+            "caption" : "OUHHHHHHHH",
+            "active" : 0
+        }        
+    ]
+}

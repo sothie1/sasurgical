@@ -1,0 +1,82 @@
+<div id="main-page">  
+    <div style="height: 400px">
+        <uib-carousel no-transition="false" interval="2000" no-wrap="false" active="active">            
+            <uib-slide ng-repeat="img in homepageController.imgData" style="height:400px" index="$index">
+                <img ng-src="{{img.source}}">
+                <div class="carousel-caption">
+                    <h4>Slide {{img.title}}</h4>
+                </div>
+            </uib-slide>
+        </uib-carousel>    
+    </div>
+
+    <br>
+    <!--Putting the about statement here-->
+    <h3 style="font-weight: bold">SA Surgical - Super Asia Group</h3>
+    <p style="text-indent: 2em; font-size: 18px">
+        The face of the healthcare industry is changing, and we are going to help you face the challenges of the future. Quality, innovation in design, and strong backup support systems are the core elements of our philosophy. To attain total customer satisfaction, Super Asia works day and night to ensure that standards are met. Constant efforts to produce the best products along with unbounded commitment to the company and its customers are our techniques for accomplishing our company’s goals. (Hyperlink to SA Group’s website)    </p>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <center>
+                <a href=""><img class="img_border" src="resources/img/askforcallback.jpg" alt=""></a><br>
+                <i class="fa fa-phone" style="color: #ff3333" aria-hidden="true"><font style="color: #333; font-size: 18px"><b> Ask For Call Back</b></font></i>
+            </center>
+        </div>
+        <div class="col-lg-3">
+            <center>
+                <a href=""><img class="img_border" src="resources/img/askfordealer.jpg" alt=""></a><br>
+                <i class="fa fa-comments-o" style="color: #ff3333" aria-hidden="true"><font style="color: #333; font-size: 18px"><b> Sales Consultant</b></font></i>
+            </center>
+        </div>
+        <div class="col-lg-3">
+            <center>
+                <a href=""><img class="img_border" src="resources/img/superasia.jpg" alt=""></a>
+                <i class="fa fa-globe" style="color: #ff3333" aria-hidden="true"><font style="color: #333; font-size: 18px"><b> Group Site</b></font></i>
+            </center>
+        </div>
+        <div class="col-lg-3">
+            <center>
+                <a href=""><img class="img_border" src="resources/img/homeimage3.jpg" alt=""></a>
+                <i class="fa fa-empire" style="color: #ff3333" aria-hidden="true"><font style="color: #333; font-size: 18px"><b> Products Inquiry</b></font></i>
+            </center>
+        </div>        
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-xs-3"> <!-- required for floating -->
+            <!-- Nav tabs -->
+            <uib-tabset active="activePill" vertical="true" type="pills">
+                <uib-tab ng-click="changeTab('tab1')" index="0" heading="Surgical Instruments"></uib-tab>
+                <uib-tab ng-click="changeTab('tab2')" index="1" heading="Dental Instruments"></uib-tab>
+                <uib-tab ng-click="changeTab('tab3')" index="2" heading="Veterinary Instruments"></uib-tab>
+                <uib-tab ng-click="changeTab('tab4')" index="3" heading="Manicure/Pedicure"></uib-tab>                
+            </uib-tabset>         
+
+        </div>  
+        <div class="col-xs-9">
+            <div class="tab-content">
+                <div id ="surgical" class="tab-pane" ng-class="{active: view_tab=='tab1'}">
+                    <a href=""><img src="resources/img/surgery.jpg"></a>
+                </div>
+                <div id ="dental" class="tab-pane" ng-class="{active: view_tab=='tab2'}">
+                    <a href=""><img src="resources/img/dental.jpg"></a>
+                </div>            
+                <div id ="veterinary" class="tab-pane" ng-class="{active: view_tab=='tab3'}">
+                    <a href=""><img src="resources/img/veterinary.jpg"></a>
+                </div>            
+                <div id ="manicure" class="tab-pane" ng-class="{active: view_tab=='tab4'}">
+                    <a href=""><img src="resources/img/pedicure.jpg"></a>
+                </div>                        
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <blockquote>
+        <p style="font-size: 18px">Reach us directly using any of the methods detailed in THE Contact Us (Hyperlink) section, or if you have a specific INQUIRY; feel free to complete an Info Request Form (Hyperlink). Our representatives are always at your service</p>
+    </blockquote>
+</div>
