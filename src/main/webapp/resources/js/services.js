@@ -10,7 +10,8 @@ angular.module('SASurgical').service('dataHandler', ['$rootScope', '$http', 'hel
     
     var dataHandler = {
         getProducts: getProducts,
-        getFrontPageCarousel:getFrontPageCarousel
+        getFrontPageCarousel:getFrontPageCarousel,
+        getSubCategories:getSubCategories
     };
     
     return dataHandler;
@@ -25,6 +26,15 @@ angular.module('SASurgical').service('dataHandler', ['$rootScope', '$http', 'hel
         
     }
     
+    function getSubCategories(category){
+        var data_json = $http.get("resources/data/main.json").then(function(response){
+            if (category == "surgical")
+                return response.data.category.sugical_sub;
+            else if (category == "dental")
+                return response.data.category.dental_sub;
+        });
+        return data_json;
+    }    
 }]);
 
 angular.module('SASurgical').service('helpers', [function(){

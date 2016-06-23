@@ -24,5 +24,25 @@
             "caption" : "OUHHHHHHHH",
             "active" : 0
         }        
-    ]
+    ],
+    "category" : {
+        "sugical_sub":{
+            "0" : "Anaesthesia",
+            "1" : "Artery Forceps",
+            "2" : "Bone Surgery",
+            "3" : "Cardiovascular Surgery",
+            "4" : "Cotton Swab Forceps",
+            "5" : "Dermatology",
+            "6" : "Diagnostics",
+            "7" : "Forceps",
+            "8" : "Goitre"
+        },
+        "dental_sub":{
+            "0" : "Articulators",
+            "1" : "Bone Instrument",
+            "2" : "Dental Tweezers",
+            "3" : "Extracting Forceps",
+            "4" : "Hollowware"
+        }
+    }   
 }

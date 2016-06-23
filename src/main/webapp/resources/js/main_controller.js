@@ -14,3 +14,11 @@ angular.module('SASurgical').controller('MainController', ['$rootScope', '$scope
         mainCtrl.loggedIn = false;
                
 }]);
+
+angular.module('SASurgical').run(function($rootScope, $templateCache) {
+    $rootScope.$on('$routeChangeStart', function(event, next, current) {
+        if (typeof(current) !== 'undefined'){
+            $templateCache.remove(current.templateUrl);
+        }
+    });
+});

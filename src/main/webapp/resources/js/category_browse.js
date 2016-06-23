@@ -12,5 +12,19 @@ angular.module('SASurgical').controller('CategoryBrowseController',['$scope','da
         
         $scope.helpers = helpers;
         $scope.category = $routeParams.category
+        
+        dataHandler.getSubCategories($scope.category).then(function (sub_category){
+            categorybrowseController.sub_category = sub_category;
+            var foo = "FOO"
+        });   
+        
+        $scope.ListView = function(){
+            $('#products .item').addClass('list-group-item');            
+        };
+        
+        $scope.GridView = function(){
+            $('#products .item').removeClass('list-group-item');
+            $('#products .item').addClass('grid-group-item');            
+        };
                       
 }]);
