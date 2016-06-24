@@ -122,7 +122,7 @@ html, body {
     margin-right:-4px;
 }
 
-a:hover, .nav-pills > li.active > a:focus{
+.nav-pills > li.active > a:focus{
     background-color: #ff4d4d    
 }
 .nav-pills > li.active > a{
@@ -150,21 +150,12 @@ a:hover, .nav-pills > li.active > a:focus{
   background-color: #1B1B1B;
   width: 100%;  
 } 
-/*.footer {
-    position: relative;
-    margin-top: 150px;  negative value of footer height 
-    height: auto;
-    clear:both;
-    padding-top:20px;
-    background-color: #1B1B1B;
-    width: 100%;
-} */
 
 .img_border{
-    border: 1px solid #ff1a1a;
+    /*border: 1px solid #ff1a1a;*/
     border-radius: 1px;
     margin-top: 0;
-    margin-bottom: 0;      
+    margin-bottom: 0;        
 }
 
 blockquote{
@@ -237,4 +228,13 @@ End product views
 
 .dropdown-menu > li > a{
     color: #808080;    
+    font-size:17px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+    background-image: linear-gradient(to bottom, #ff4d4d 0%, #ff3333 100%);    
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

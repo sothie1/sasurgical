@@ -1,11 +1,13 @@
 <div id="main-page">  
     <div style="height: 400px">
-        <uib-carousel no-transition="false" interval="2000" no-wrap="false" active="active">            
-            <uib-slide ng-repeat="img in homepageController.imgData" style="height:400px" index="$index">
-                <img ng-src="{{img.source}}">
-                <div class="carousel-caption">
-                    <h4>Slide {{img.title}}</h4>
-                </div>
+        <uib-carousel no-transition="false" interval="4000" no-wrap="false" active="active">            
+            <uib-slide ng-repeat="img in homepageController.imgData" style="height:400px" index="$index">                
+                <div class="hovereffect">
+                    <img ng-src="{{img.source}}">
+                    <div class="overlay">
+                        <a class="info" href="#">More Info</a>
+                    </div>
+                </div>                
             </uib-slide>
         </uib-carousel>    
     </div>
@@ -20,25 +22,25 @@
     <div class="row">
         <div class="col-lg-3">
             <center>
-                <a href=""><img class="img_border" src="resources/img/askforcallback.jpg" alt=""></a><br>
+                <a href=""><img class="shadow img_border" src="resources/img/askforcallback.jpg" alt=""></a><br>
                 <i class="fa fa-phone" style="color: #ff3333" aria-hidden="true"><font style="color: #333; font-size: 18px"><b> Ask For Call Back</b></font></i>
             </center>
         </div>
         <div class="col-lg-3">
             <center>
-                <a href=""><img class="img_border" src="resources/img/askfordealer.jpg" alt=""></a><br>
+                <a href=""><img class="shadow img_border" src="resources/img/askfordealer.jpg" alt=""></a><br>
                 <i class="fa fa-comments-o" style="color: #ff3333" aria-hidden="true"><font style="color: #333; font-size: 18px"><b> Sales Consultant</b></font></i>
             </center>
         </div>
         <div class="col-lg-3">
             <center>
-                <a href=""><img class="img_border" src="resources/img/superasia.jpg" alt=""></a>
+                <a href=""><img class="shadow img_border" src="resources/img/superasia.jpg" alt=""></a>
                 <i class="fa fa-globe" style="color: #ff3333" aria-hidden="true"><font style="color: #333; font-size: 18px"><b> Group Site</b></font></i>
             </center>
         </div>
         <div class="col-lg-3">
             <center>
-                <a href=""><img class="img_border" src="resources/img/homeimage3.jpg" alt=""></a>
+                <a href=""><img class="shadow img_border" src="resources/img/homeimage3.jpg" alt=""></a>
                 <i class="fa fa-empire" style="color: #ff3333" aria-hidden="true"><font style="color: #333; font-size: 18px"><b> Products Inquiry</b></font></i>
             </center>
         </div>        

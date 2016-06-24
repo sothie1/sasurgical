@@ -19,5 +19,9 @@ angular.module('SASurgical').config(['$httpProvider', '$routeProvider', '$locati
         templateUrl: 'resources/tpl/category_browse.html',
         controller: 'CategoryBrowseController',
         controllerAs: 'categorybrowseController'
+    }).when('/profile',{
+        templateUrl:'resources/tpl/company_profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'profileController'
     });
 }]);

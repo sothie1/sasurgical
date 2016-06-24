@@ -5,6 +5,7 @@
  */
 
 
-var dependencies = ['ngRoute', 'ngSanitize','ui.bootstrap']
+var dependencies = ['ngRoute', 'ngSanitize','ui.bootstrap','ngAnimate']
 
 angular.module('SASurgical', dependencies)
+    
