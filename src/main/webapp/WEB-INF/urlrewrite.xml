@@ -7,9 +7,19 @@ and open the template in the editor.
 
 <urlrewrite>
 
-    <rule>
-       <from>^/sa_surgical/(.*)$</from>
-       <to>^/sa_surgical</to>
+    <rule match-type="wildcard">
+        <from>*/browse/*</from>
+        <to>/</to>
+    </rule>
+
+    <rule match-type="wildcard">
+        <from>*/contact</from>
+        <to>/</to>
+    </rule>
+    
+    <rule match-type="wildcard">
+        <from>*/profile</from>
+        <to>/</to>
     </rule>
 
 </urlrewrite>

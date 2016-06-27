@@ -14,6 +14,10 @@ html, body {
     font-size: 20px;
 }
 
+body {
+    padding-top: 65px; 
+}
+
 .saborder{
     /*border: 1px solid #ff1a1a;*/
     border-radius: 1px;
@@ -144,7 +148,7 @@ html, body {
 .footer {
   position: relative;
   margin-top: -150px; /* negative value of footer height */
-  height: 170px;
+  height: 150px;
   clear:both;
   padding-top:20px;
   background-color: #1B1B1B;
@@ -237,4 +241,18 @@ End product views
 
 .shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 70px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  width: auto;
+}
+
+.img-center {
+	margin: 0 auto;
 }
