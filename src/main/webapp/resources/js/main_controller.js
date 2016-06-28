@@ -12,6 +12,11 @@ angular.module('SASurgical').controller('MainController', ['$rootScope', '$scope
         
         //Setting the global variabls
         mainCtrl.loggedIn = false;
+        
+        dataHandler.getParentCategory().then(function (parent_category){
+            mainCtrl.parent_category = parent_category;
+            var foo = "";
+        });           
                
 }]);
 

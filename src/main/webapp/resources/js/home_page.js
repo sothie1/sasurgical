@@ -19,6 +19,5 @@ angular.module('SASurgical').controller('HomePageController',['$scope','dataHand
         
         dataHandler.getFrontPageCarousel().then(function (imgData){
             homepageController.imgData = imgData;
-            var foo = "Foo"
         });                
 }]);

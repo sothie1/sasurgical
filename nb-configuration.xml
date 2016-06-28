@@ -12,12 +12,6 @@ Without this configuration present, some functionality in the IDE may be limited
         </config-files>
         <config-file-groups/>
     </spring-data>
-    <spring-data xmlns="http://www.netbeans.org/ns/spring-data/1">
-        <config-files>
-            <config-file>src/main/resources/applicationContext.xml</config-file>
-        </config-files>
-        <config-file-groups/>
-    </spring-data>
     <properties xmlns="http://www.netbeans.org/ns/maven-properties-data/1">
         <!--
 Properties that influence various parts of the IDE, especially code formatting and the like. 

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.support.WebApplicationObjectSupport;
+import sasurgical.dto.Category;
 import sasurgical.jdbc.SASurgicalCatalogDataAccess;
 
 /**
@@ -22,7 +23,7 @@ import sasurgical.jdbc.SASurgicalCatalogDataAccess;
  * @author em000001
  */
 @Controller
-@RequestMapping("/browse_item")
+//@RequestMapping("/browse_item")
 public class BrowserController extends WebApplicationObjectSupport {
     
     private SASurgicalCatalogDataAccess itemDataAccess;
@@ -32,12 +33,15 @@ public class BrowserController extends WebApplicationObjectSupport {
         this.itemDataAccess = itemDataAccess;
     }
     
-    @RequestMapping(value = "/get_all_faq", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    @RequestMapping(value = "/get_categories", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
     public @ResponseBody 
-    List<String> getSubCategories(ModelMap model, @RequestParam(value = "category", required = false) int category_id){
-        List<String> sub_categories = itemDataAccess.getSubCategories(category_id);
+    List<Category> getSubCategories(ModelMap model, @RequestParam(value = "category", required = true) int category_id,
+            @RequestParam(value = "parent_category", required = true) int parent_category){
+        List<Category> sub_categories = null;
+        if (parent_category == 1)
+            sub_categories = itemDataAccess.getSubCategories(0);
+        else
+            sub_categories = itemDataAccess.getSubCategories(category_id);            
         return sub_categories;
-    }
-            
-    
+    }                
 }

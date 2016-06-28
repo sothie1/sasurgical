@@ -5,7 +5,18 @@
  */
 package sasurgical.jdbc;
 
+import com.mysql.cj.jdbc.MysqlDataSource;
+import java.sql.PreparedStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import sasurgical.dto.Category;
 
 /**
  *
@@ -13,8 +24,63 @@ import java.util.List;
  */
 public class SASurgicalCatalogDataAccess {
     
-    public List<String> getSubCategories(int category){
-        return null;
+    private Connection getConnection() throws SQLException{
+        Connection conn = null;
+        
+        MysqlDataSource dataSource = new MysqlDataSource();
+        dataSource.setUser("root");
+        dataSource.setPassword("");
+        dataSource.setServerName("localhost");
+        dataSource.setPort(3306);
+        dataSource.setDatabaseName("sasurgical_db");
+        conn = dataSource.getConnection();
+
+        return conn;        
     }
     
+    private void close_conn(ResultSet rs, Statement stmt, Connection conn){
+        try {
+            if (rs != null)
+                rs.close();
+            if (stmt != null)
+                stmt.close();
+            if (conn != null)
+                conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(SASurgicalCatalogDataAccess.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public List<Category> getSubCategories(int parent_category){
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;        
+        List<Category> sub_categories = new ArrayList<Category>();
+        try {
+           conn = getConnection();
+           String query = "select * from oc_category_description where parent_id = ? order by name asc";
+           pstmt = conn.prepareStatement(query);          
+           pstmt.setInt(1, parent_category);
+           rs = pstmt.executeQuery();
+
+           while (rs.next()){
+               Category cat = new Category();
+               cat.setId(rs.getInt("category_id"));
+               cat.setName(rs.getString("name"));
+               sub_categories.add(cat);
+           }
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(SASurgicalCatalogDataAccess.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return sub_categories;
+    }
+    
+//    public static void main(String args[]){
+//        List<Category> sub_categories = getSubCategories(59);
+//        for (int i = 0; i < sub_categories.size(); i ++){
+//            System.out.println("id: " + sub_categories.get(i).getId() + " Name: " + sub_categories.get(i).getName());
+//        }
+//        System.out.println("FOO");
+//    }
 }

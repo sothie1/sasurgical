@@ -9,7 +9,7 @@ angular.module('SASurgical').service('dataHandler', ['$rootScope', '$http', 'hel
     var mainCtrl = $rootScope.mainCtrl;
     
     var dataHandler = {
-        getProducts: getProducts,
+        getParentCategory: getParentCategory,
         getFrontPageCarousel:getFrontPageCarousel,
         getSubCategories:getSubCategories
     };
@@ -22,8 +22,11 @@ angular.module('SASurgical').service('dataHandler', ['$rootScope', '$http', 'hel
         });
     }
     
-    function getProducts(categoryId){
-        
+    function getParentCategory(){
+        var data_json = $http({method:'GET',url:'get_categories',data:{"category":0,"parent_category":1}}).then(function(response){
+            return response;
+        });
+        return data_json;        
     }
     
     function getSubCategories(category){
