@@ -15,7 +15,6 @@ angular.module('SASurgical').controller('MainController', ['$rootScope', '$scope
         
         dataHandler.getParentCategory().then(function (parent_category){
             mainCtrl.parent_category = parent_category;
-            var foo = "";
         });           
                
 }]);

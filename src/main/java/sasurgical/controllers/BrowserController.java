@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.support.WebApplicationObjectSupport;
 import sasurgical.dto.Category;
+import sasurgical.dto.Item;
 import sasurgical.jdbc.SASurgicalCatalogDataAccess;
 
 /**
@@ -43,5 +44,12 @@ public class BrowserController extends WebApplicationObjectSupport {
         else
             sub_categories = itemDataAccess.getSubCategories(category_id);            
         return sub_categories;
-    }                
+    }    
+    
+    @RequestMapping(value = "/get_all_items_sub", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    public @ResponseBody
+    List <Item> getAllItemsSub(ModelMap model, @RequestParam(value = "category", required = true) int category_id){
+        List<Item> items = itemDataAccess.getAllItemsInSub(category_id);
+        return items;
+    }
 }

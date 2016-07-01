@@ -51,26 +51,22 @@
         <div class="col-xs-3"> <!-- required for floating -->
             <!-- Nav tabs -->
             <uib-tabset active="activePill" vertical="true" type="pills">
-                <uib-tab ng-click="changeTab('tab1')" index="0" heading="Surgical Instruments"></uib-tab>
-                <uib-tab ng-click="changeTab('tab2')" index="1" heading="Dental Instruments"></uib-tab>
-                <uib-tab ng-click="changeTab('tab3')" index="2" heading="Veterinary Instruments"></uib-tab>
-                <uib-tab ng-click="changeTab('tab4')" index="3" heading="Manicure/Pedicure"></uib-tab>                
+                <uib-tab ng-repeat="parent_cat in mainCtrl.parent_category" ng-click="changeTab(parent_cat.id)" index="$index" heading ="{{parent_cat.name}}"></uib-tab>
             </uib-tabset>         
-
         </div>  
         <div class="col-xs-9">
             <div class="tab-content">
-                <div id ="surgical" class="tab-pane" ng-class="{active: view_tab=='tab1'}">
-                    <a href="browse/surgical"><img src="resources/img/surgery.jpg"></a>
+                <div id ="surgical" class="tab-pane" ng-class="{active: view_tab==59}">
+                    <a href="browse/59"><img src="resources/img/surgery.jpg"></a>
                 </div>
-                <div id ="dental" class="tab-pane" ng-class="{active: view_tab=='tab2'}">
-                    <a href="browse/dental"><img src="resources/img/dental.jpg"></a>
+                <div id ="dental" class="tab-pane" ng-class="{active: view_tab==60}">
+                    <a href="browse/60"><img src="resources/img/dental.jpg"></a>
                 </div>            
-                <div id ="veterinary" class="tab-pane" ng-class="{active: view_tab=='tab3'}">
-                    <a href="browse/dental"><img src="resources/img/veterinary.jpg"></a>
+                <div id ="veterinary" class="tab-pane" ng-class="{active: view_tab==62}">
+                    <a href="browse/61"><img src="resources/img/veterinary.jpg"></a>
                 </div>            
-                <div id ="manicure" class="tab-pane" ng-class="{active: view_tab=='tab4'}">
-                    <a href="browse/dental"><img src="resources/img/pedicure.jpg"></a>
+                <div id ="manicure" class="tab-pane" ng-class="{active: view_tab==61}">
+                    <a href="browse/62"><img src="resources/img/pedicure.jpg"></a>
                 </div>                        
             </div>
         </div>

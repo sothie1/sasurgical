@@ -11,7 +11,7 @@ angular.module('SASurgical').controller('HomePageController',['$scope','dataHand
         
         $scope.helpers = helpers;
         $scope.active = 0;
-        $scope.view_tab = 'tab1';
+        $scope.view_tab = 60;
         
         $scope.changeTab = function(tab){
             $scope.view_tab = tab;

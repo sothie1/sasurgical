@@ -12,11 +12,17 @@ angular.module('SASurgical').controller('CategoryBrowseController',['$scope','da
         
         $scope.helpers = helpers;
         $scope.category = $routeParams.category
+        $scope.items = [];
         
         dataHandler.getSubCategories($scope.category).then(function (sub_category){
             categorybrowseController.sub_category = sub_category;
-            var foo = "FOO"
         });   
+        
+        $scope.grabItems = function(category_id){
+            dataHandler.getAllItemSub(category_id).then(function (items){
+                $scope.items = items;
+            });
+        };
         
         $scope.ListView = function(){
             $('#products .item').addClass('list-group-item');            
