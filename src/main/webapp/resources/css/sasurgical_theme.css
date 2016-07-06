@@ -182,7 +182,7 @@ Product views
 .item.list-group-item
 {
     float: none;
-    width: 100%;
+    width: 500px;
     background-color: #fff;
     margin-bottom: 10px;
 }
@@ -255,4 +255,10 @@ End product views
 
 .img-center {
 	margin: 0 auto;
+}
+
+.top-buffer { margin-top:20px; }
+
+.angular-google-map-container {
+        height: 400px;
 }

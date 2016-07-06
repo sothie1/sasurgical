@@ -5,7 +5,7 @@
  */
 
 
-var dependencies = ['ngRoute', 'ngSanitize','ui.bootstrap','ngAnimate','ui.mask']
+var dependencies = ['ngRoute', 'ngSanitize','ui.bootstrap','ngAnimate','ui.mask'];/*,'uiGmapgoogle-maps'];*/
 
-angular.module('SASurgical', dependencies)
+angular.module('SASurgical', dependencies);
     

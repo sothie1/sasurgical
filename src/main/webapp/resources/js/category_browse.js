@@ -16,6 +16,8 @@ angular.module('SASurgical').controller('CategoryBrowseController',['$scope','da
         
         dataHandler.getSubCategories($scope.category).then(function (sub_category){
             categorybrowseController.sub_category = sub_category;
+            if (sub_category.length > 0)                
+                $scope.grabItems(sub_category[0].id);
         });   
         
         $scope.grabItems = function(category_id){

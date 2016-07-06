@@ -13,7 +13,7 @@
         </div>  
         <div class="col-xs-9 container-fluid">
             <div class="well well-sm">
-                <strong>Display</strong>
+                <strong>Display Type </strong>
                 <div class="btn-group">
                     <a href="#" ng-click="ListView()" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
                         </span>List</a> <a href="#" ng-click="GridView()" id="grid" class="btn btn-default btn-sm"><span
@@ -24,20 +24,21 @@
                 </div>
             </div>
             <div id="products" class="row list-group">
-                <div ng-repeat="item in items | filter:searchText" class="item  col-xs-4 col-lg-4">
+                <div ng-repeat="item in items | filter:searchText" class="item  col-xs-4 col-lg-4" >
                     <div class="thumbnail">
                         <!--400x250-->
-                        <img class="group list-group-image" ng-src="resources/img/{{item.img_path}}" alt="" />
+                        <img class="group list-group-image" style="height:250px" ng-src="resources/img/{{item.img_path}}" alt="" />
                         <div class="caption">
-                            <h4 class="group inner list-group-item-heading">
-                                {{item.name}}</h4>
-                            <p class="group inner list-group-item-text">
-                            {{item.description}}
+                            <h5 class="group inner list-group-item-heading">
+                                {{item.name}}
+                            </h5>
+                            <p style="height:100px" class="group inner list-group-item-text">
+                                {{item.description}}
                             </p>
                             <div class="row">
                                 <div class="col-xs-12 col-md-6">
                                     <p class="lead">
-                                    price
+                                        price
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-md-6">
