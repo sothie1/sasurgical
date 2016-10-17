@@ -7,30 +7,27 @@
         <base href="/sa_surgical/"/>
 
         <link href="resources/css/bootstrap.css" rel="stylesheet"/>
-        <link href="resources/css/bootstrap-theme.css" rel="stylesheet"/>        
+        <link href="resources/css/bootstrap-theme.css" rel="stylesheet"/>            
         <link href="resources/css/font-awesome.css" rel="stylesheet"/>      
         <link href="resources/css/sasurgical_theme.css" rel="stylesheet"/>
         <link href="resources/css/bootstrap.vertical-tabs.css" rel="stylesheet"/>
         <link href="resources/css/image_hover.css" rel="stylesheet"/>
-
-        <script src="resources/js/dependencies/jquery-2.2.3.js"></script>                
-        <script src="resources/js/dependencies/tether.min.js"></script>                
-        <script src="resources/js/dependencies/angular.js"></script>      
-        <script src="resources/js/dependencies/angular-mocks.js"></script>              
-        <script src="resources/js/dependencies/angular-animate.min.js"></script>
-        <script src="resources/js/dependencies/angular-touch.js"></script>
-        <script src="resources/js/dependencies/angular-route.min.js"></script>
-        <script src="resources/js/dependencies/angular-sanitize.min.js"></script>
+        
+        <!--Switching to use bower dependency stuff-->
+        <script src="resources/js/dependencies/bower_components/jquery/dist/jquery.js"></script>
+        <script src="resources/js/dependencies/bower_components/tether/dist/js/tether.js"></script>
+        <script src="resources/js/dependencies/bower_components/angular/angular.js"></script>
+        <script src="resources/js/dependencies/bower_components/angular-mocks/angular-mocks.js"></script>
+        <script src="resources/js/dependencies/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="resources/js/dependencies/bower_components/angular-touch/angular-touch.js"></script>
+        <script src="resources/js/dependencies/bower_components/angular-route/angular-route.js"></script>
+        <script src="resources/js/dependencies/bower_components/angular-sanitize/angular-sanitize.js"></script>        
         <script src="resources/js/dependencies/bootstrap.min.js"></script>
+        <script src="resources/js/dependencies/bower_components/angular-touch/angular-touch.js"></script>        
         <script src="resources/js/dependencies/ui-bootstrap-tpls-1.3.3.js"></script>
         <script src="resources/js/dependencies/mask.min.js"></script>
-<!--        <script src="resources/js/dependencies/angular-simple-logger.light.min.js"></script>        
-        <script type="text/javascript" 
-          src="http://maps.google.com/maps?file=api&v=2&sensor=false&key=">
-        </script>        
-        <script src="resources/js/dependencies/lodash.min.js"></script>
-        <script src="resources/js/dependencies/angular-google-maps.min.js"></script>        -->
-
+        <script src="resources/js/dependencies/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        
         <!--Importing the controller scripts-->
         <script src="resources/js/app.js"></script>  
         <script src="resources/js/services.js"></script>
@@ -65,10 +62,6 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-<!--                                        <li><a href="browse/surgical">Surgical Instruments</a></li>
-                                        <li><a href="browse/dental">Dental Instruments</a></li>
-                                        <li><a href="browse/veterinary">Veterinary Instruments</a></li>
-                                        <li><a href="browse/manicure">Manicure / Pedicure</a></li>-->
                                         <li ng-repeat="parent_cat in mainCtrl.parent_category">
                                             <a href="browse/{{parent_cat.id}}">{{parent_cat.name}}</a>
                                         </li>

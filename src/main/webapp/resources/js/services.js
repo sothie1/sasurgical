@@ -5,17 +5,59 @@
  */
 
 
-angular.module('SASurgical').service('dataHandler', ['$rootScope', '$http', 'helpers', function($rootScope, $http, helpers){
+angular.module('SASurgical').service('dataHandler', ['$rootScope', '$http', 'helpers', 'localStorageService', function($rootScope, $http, helpers, localStorageService){
     var mainCtrl = $rootScope.mainCtrl;
     
     var dataHandler = {
         getParentCategory: getParentCategory,
         getFrontPageCarousel:getFrontPageCarousel,
         getSubCategories:getSubCategories,
-        getAllItemSub:getAllItemSub
+        getAllItemSub:getAllItemSub,
+        storeLocalStorage:storeLocalStorage,
+        getLocalStorage:getLocalStorage,
+        removeLocalStorage:removeLocalStorage,
+        clearLocalStorage:clearLocalStorage
     };
     
     return dataHandler;
+    
+    function storeLocalStorage(key, val){
+        if(localStorageService.isSupported) {
+            return localStorageService.set(key, val);
+        }
+        else if(localStorageService.cookie.isSupported) {
+            return localStorageService.cookie.set(key, val);
+        }
+    }
+    
+    function getLocalStorage(key){
+        if (localStorageService.isSupported){
+            return localStorageService.get(key);
+        }
+        else if (localStorageService.cookie.isSupported){
+            return localStorageService.cookie.get(key);
+        }
+    }
+    
+    function removeLocalStorage(key){
+        if (localStorageService.isSupported){
+            if (localStorageService.get(key) != null)
+                return localStorageService.remove(key);
+        }
+        else if (localStorageService.cookie.isSupported){
+            if (localStorageService.cookie.get(key) != null)
+                return localStorageService.cookie.get(key);
+        }
+    }
+    
+    function clearLocalStorage(){
+        if (localStorageService.isSupported){
+            return localStorageService.clearAll();
+        }
+        else if (localStorageService.cookie.isSupported){
+            return localStorageService.cookie.clearAll();
+        }
+    }
     
     function getFrontPageCarousel(){
         return $http.get('resources/data/main.json').then(function(response){

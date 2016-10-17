@@ -15,8 +15,8 @@ angular.module('SASurgical').controller('MainController', ['$rootScope', '$scope
         
         dataHandler.getParentCategory().then(function (parent_category){
             mainCtrl.parent_category = parent_category;
-        });           
-               
+        });      
+        
 }]);
 
 angular.module('SASurgical').run(function($rootScope, $templateCache) {
@@ -25,4 +25,12 @@ angular.module('SASurgical').run(function($rootScope, $templateCache) {
             $templateCache.remove(current.templateUrl);
         }
     });
+});
+
+//Configuring the browser local storage for shopping cart and session
+angular.module('SASurgical').config(function (localStorageServiceProvider){
+    localStorageServiceProvider
+            .setStorageType('sessionStorage')
+            .setStorageCookie(0, '/', true)
+            .setNotify(true, true);
 });

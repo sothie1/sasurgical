@@ -29,7 +29,7 @@ public class SASurgicalCatalogDataAccess {
     private Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/sasurgical_db?"
-                + "user=root&serverTimezone=America/New_York");
+                + "user=root&password=Il0vesteakchicken!!&serverTimezone=America/New_York");
 //        MysqlDataSource dataSource = new MysqlDataSource();
 //        dataSource.setUser("root");
 //        dataSource.setPassword("");
