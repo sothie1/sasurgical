@@ -1,0 +1,29 @@
+{
+  "name": "SASurgical",
+  "homepage": "https://github.com/sothie1/sasurgical",
+  "authors": [
+    "Sothiara Em <sothie@gmail.com>"
+  ],
+  "description": "Require JS files",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.5.8",
+    "angular-local-storage": "^0.5.2",
+    "angular-mocks": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular": "^1.5.8",
+    "jquery": "2.2.3",
+    "tether": "^1.3.7"
+  }
+}
